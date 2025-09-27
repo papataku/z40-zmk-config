@@ -292,7 +292,7 @@
 				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp DEL
 				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp PG_UP  &kp PG_DN  &trans     &trans
 				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp HOME   &kp END    &trans     &trans
-                &trans     &trans     &trans     &trans     &mp SPECI  &trans                &trans     XXXXXXXXXX &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &mo SPECI  &trans                &trans     XXXXXXXXXX &trans     &trans     &trans
 			>;
 		};
 
@@ -323,7 +323,7 @@
 			// -------------------------------------------------------------------------------------------------------------------------------------
 			// |          |          |          |          |          |          |          |          |          |          |          |          |
 			bindings = <
-				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &bootloader
+				&soft_off  &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &bootloader
 				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &sys_reset
 				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
                 &trans     &trans     &trans     &trans     &trans     &trans                &trans     &trans     &trans     &trans     &trans
