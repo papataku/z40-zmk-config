@@ -19,6 +19,7 @@
 #define FUNC1 5
 #define FUNC2 6
 #define ADJUS 7
+#define SPECI 8
 
 
 
@@ -271,7 +272,7 @@
 				J_GRAV     J_EXCL     J_AT       J_HASH     J_DLLR     J_PRCN     J_CARE     J_AMPS     J_ASTR     J_LPAR     J_RPAR     J_BSLH
 				J_TILD     &trans     &trans     &trans     &trans     &trans     J_EQL      &kp MINUS  J_LBRC     J_RBRC     J_SQT      J_PIPE
 				&trans     &trans     &trans     &trans     &trans     &trans     J_PLUS     J_UNDE     J_LBKT     J_RBKT     J_DQT      &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                XXXXXXXXXX &kp K_APP  &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &mo SPECI  &trans                XXXXXXXXXX &kp K_APP  &trans     &trans     &trans
             >;
         };
 
@@ -280,7 +281,7 @@
 				&kp GRAVE  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &kp BSLH
 				&kp TILDE  &trans     &trans     &trans     &trans     &trans     &kp EQL    &kp MINUS  &kp LBRC   &kp RBRC   &kp SQT    &kp PIPE
 				&trans     &trans     &trans     &trans     &trans     &trans     &kp PLUS   &kp UNDER  &kp LBKT   &kp RBKT   &kp DQT    &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                XXXXXXXXXX &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &mo SPECI  &trans                XXXXXXXXXX &trans     &trans     &trans     &trans
             >;
         };
 
@@ -291,7 +292,7 @@
 				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp DEL
 				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp PG_UP  &kp PG_DN  &trans     &trans
 				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp HOME   &kp END    &trans     &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                &trans     XXXXXXXXXX &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &mp SPECI  &trans                &trans     XXXXXXXXXX &trans     &trans     &trans
 			>;
 		};
 
@@ -311,11 +312,22 @@
             // -------------------------------------------------------------------------------------------------------------------------------------
 			// |          |          |          |          |          |          |          |          |          |          |          |          |
 
-                &trans     &q_key     &w_key     &e_key     &r_key     &trans     &trans     &to USKEY  &trans     &trans     &trans     &bootloader
-                &trans     &bt BT(0)  &bt BT(1)  &bt BT(2)  &bt BT(3)  &bt BT(4)  &bt BT_CLR &to JISKEY &trans     &trans     &trans     &sys_reset
+                &trans     &q_key     &w_key     &e_key     &r_key     &trans     &trans     &to USKEY  &trans     &trans     &trans     &trans
+                &trans     &bt BT(0)  &bt BT(1)  &bt BT(2)  &bt BT(3)  &bt BT(4)  &bt BT_CLR &to JISKEY &trans     &trans     &trans     &trans
                 &trans     &out OUT_USB &out OUT_BLE &trans &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
                 &trans     &trans     &trans     &trans     &trans     &trans                &trans     &trans     &trans     &trans     &trans
             >;
         };
+
+		special {
+			// -------------------------------------------------------------------------------------------------------------------------------------
+			// |          |          |          |          |          |          |          |          |          |          |          |          |
+			bindings = <
+				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &bootloader
+				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &sys_reset
+				&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans                &trans     &trans     &trans     &trans     &trans
+			>;
+		};
     };
 };
