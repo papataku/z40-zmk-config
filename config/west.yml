@@ -1,7 +1,7 @@
 manifest:
   remotes:
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
+    - name: papataku
+      url-base: https://github.com/papataku
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
   projects:
@@ -9,8 +9,8 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: blank-slate-zmk-module
-      remote: petejohanson
+    - name: z40-zmk-module
+      remote: papataku
       revision: main
   self:
     path: config

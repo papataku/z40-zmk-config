@@ -1,12 +1,6 @@
-# Blank Slate ZMK Firmware
+# z40  ZMK Firmware
 
-This repo contains the firmware for the Blank Slate PCB.
-
-For full build guide for the Blank Slate, see https://docs.lpgala.xyz/docs/blank-slate-build-guide/overview/
-
-# Soft Off Support
-
-Blank Slate includes support for a ZMK feature this is still [in a PR](https://github.com/zmkfirmware/zmk/pull/1942). By default, this repository builds against that feature branch to ensure that works properly.
+This repo contains the firmware for the z40 BLE PCB.
 
 Should you desire to track ZMK `main` (or some other branch of ZMK), simply edit the `config/west.yml` file and replace the contents with:
 
@@ -20,14 +14,14 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: blank-slate-zmk-module
-      remote: petejohanson
+    - name: z40-zmk-module
+      remote: papataku
       revision: main
   self:
     path: config
 ```
 
-And then comment out the line in `config/lpgalaxy_blank_slate.conf`:
+And then comment out the line in `config/z40.conf`:
 
 ```
 # CONFIG_ZMK_PM_SOFT_OFF=y
